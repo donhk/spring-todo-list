@@ -33,6 +33,9 @@ class ListTodoComponent extends Component {
             console.log('remove done')
             this.setState({message: `Delete of todo ${id} successful`})
             this.refreshTodos()
+        }).catch((e) => {
+            console.log('error: ' + e.toString())
+            this.refreshTodos()
         });
     }
 
